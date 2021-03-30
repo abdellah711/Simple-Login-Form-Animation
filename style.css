@@ -1,0 +1,101 @@
+:root{
+    --colorAccent: rgb(25, 132, 233);
+
+}
+*{
+    margin: 0;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* modal */
+
+.modal{
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position:fixed;
+    display: none;
+}
+
+
+/* dialog */
+.dialog{
+    background-color: #fafafa;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 0 2rem;
+    padding-top: 12%;
+    transform: translateX(100%);
+}
+
+
+/* form styling */
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 24rem;
+    min-width: 30vw;
+}
+
+form > *{
+    margin: .5rem 0;
+}
+
+input[type="email"],input[type="password"]{
+    border: 1.5px solid var(--colorAccent);
+    border-radius: 7px;
+    padding: .6rem;
+    
+}
+label{
+    cursor: pointer;
+}
+input[type="submit"],.login{
+    background-color: var(--colorAccent);
+    color: white;
+    padding: .6rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.not_member{
+    text-align: center;
+}
+
+
+@keyframes showDialog{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%); 
+    }
+}
+
+@keyframes hideDialog{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%); 
+    }
+}
+
+/* login btn */
+
+.login_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+   padding: .5rem 3rem; 
+}
